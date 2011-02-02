@@ -1,0 +1,4 @@
+TITLE = "Job Advertiser"
+DESCRIPTION = "Job Advertiser is a site about bla bla"
+KEYWORDS = "Job, Advertiser"
+FEED_BURNER_URL = 'http://feeds.feedburner.com/bobanj'
