@@ -1,4 +1,4 @@
-Job Advertisor - It's a simple app for managing jobs
+Job Advertiser - It's a simple app for managing jobs
 ======================================================
 * Currently adapted only for dev env.
 
@@ -8,3 +8,4 @@ Install
 * run migrations
 * change settings in config/initializers/configuration.rb
 * rails server
+
