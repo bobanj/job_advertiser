@@ -38,6 +38,9 @@ gem 'jquery-rails', '>=0.2.6'
 gem 'will_paginate', '~> 3.0.pre2'
 gem 'twitter', '~> 1.0'
 # Test
-gem "rspec-rails", ">= 2.0.1", :group => [:development, :test]
+group :development, :test do
+  gem 'web-app-theme', '>= 0.6.3'
+  gem "rspec-rails", ">= 2.0.1"
+end
 gem "cucumber-rails", :group => :test
 gem "capybara", :group => :test
