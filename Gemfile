@@ -39,8 +39,19 @@ gem 'will_paginate', '~> 3.0.pre2'
 gem 'twitter', '~> 1.0'
 # Test
 group :development, :test do
+  gem 'hpricot'
+  gem 'ruby_parser'
   gem 'web-app-theme', '>= 0.6.3'
   gem "rspec-rails", ">= 2.0.1"
 end
-gem "cucumber-rails", :group => :test
-gem "capybara", :group => :test
+
+group :development do
+  gem "wirble"
+  gem "hirb"
+  gem "awesome_print"
+end
+
+group :test do
+  gem "cucumber-rails"
+  gem "capybara"
+end

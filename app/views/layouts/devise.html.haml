@@ -27,11 +27,9 @@
           - flash.each do |type, message|
             %div{:class => "message #{type}"}
               %p= message
-        #main
+        #box
           = yield
-          #footer
-            .block
-              %p
-                Copyright &copy; #{Time.now.year} Job Advertiser.
-        #sidebar
-          = yield :sidebar
+        #footer
+          .block
+            %p
+              Copyright &copy; #{Time.now.year} Job Advertiser.
