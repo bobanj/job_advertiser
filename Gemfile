@@ -31,13 +31,13 @@ gem 'sqlite3-ruby', :require => 'sqlite3'
 # end
 
 gem "devise", ">=1.1.5"
-gem "haml", ">= 3.0.0"
 gem "haml-rails", ">=0.3.4"
 gem 'compass', '>= 0.10.6'
 gem 'jquery-rails', '>=0.2.6'
+gem 'simple_form'
 gem 'will_paginate', '~> 3.0.pre2'
-gem 'twitter', '~> 1.0'
 # Test
+
 group :development, :test do
   gem 'hpricot'
   gem 'ruby_parser'

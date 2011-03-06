@@ -1,0 +1,24 @@
+= simple_form_for(@profile) do |f|
+  - if @profile.errors.any?
+    #error_explanation
+      %h2
+        = pluralize(@profile.errors.count, "error")
+        prohibited this profile from being saved:
+
+      %ul
+        - @profile.errors.full_messages.each do |msg|
+          %li= msg
+
+  .inputs
+    = f.association :user
+    = f.input :first_name
+    = f.input :last_name
+    = f.input :street_name
+    = f.input :postcode
+    = f.input :country
+    = f.input :mobile
+    = f.input :gender
+    = f.input :date_of_birth
+
+  .actions
+    = f.button :submit

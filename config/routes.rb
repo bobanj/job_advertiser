@@ -1,4 +1,6 @@
 JobAdvertisor::Application.routes.draw do
+  resources :profiles
+
   get "front_page/index"
 
   devise_for :users
