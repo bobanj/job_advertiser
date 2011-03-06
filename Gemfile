@@ -36,6 +36,8 @@ gem 'compass', '>= 0.10.6'
 gem 'jquery-rails', '>=0.2.6'
 gem 'simple_form'
 gem 'will_paginate', '~> 3.0.pre2'
+gem 'carrierwave'
+gem 'rmagick'
 # Test
 
 group :development, :test do

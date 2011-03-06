@@ -1,6 +1,14 @@
 class DeviseCreateUsers < ActiveRecord::Migration
   def self.up
     create_table(:users) do |t|
+      t.string :first_name
+      t.string :last_name
+      t.string :street_name
+      t.string :postcode
+      t.string :country
+      t.string :mobile
+      t.string :gender
+      t.datetime :date_of_birth
       t.database_authenticatable :null => false
       t.recoverable
       t.rememberable

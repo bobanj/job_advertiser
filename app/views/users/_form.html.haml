@@ -1,0 +1,22 @@
+= simple_form_for(@user, :html => {:class => 'form', :multipart => true}) do |f|
+  - if @user.errors.any?
+    .flash
+      - @user.errors.full_messages.each do |msg|
+        .message.error= msg
+
+  .group
+    = f.input :avatar, :as => :file, :input_html => {:class => 'text_field'}, :label_html => {:class => 'label'}
+    = f.input :remote_avatar_url, :as => :string, :input_html => {:class => 'text_field'}, :label_html => {:class => 'label'}, :label => 'Or Specify avatar url'
+    = f.input :first_name, :input_html => {:class => 'text_field'}, :label_html => {:class => 'label'}
+    = f.input :last_name, :input_html => {:class => 'text_field'}, :label_html => {:class => 'label'}
+    = f.input :street_name, :input_html => {:class => 'text_field'}, :label_html => {:class => 'label'}
+    = f.input :postcode, :input_html => {:class => 'text_field'}, :label_html => {:class => 'label'}
+    = f.input :country, :input_html => {:class => 'text_field'}, :label_html => {:class => 'label'}
+    = f.input :mobile, :input_html => {:class => 'text_field'}, :label_html => {:class => 'label'}
+    = f.input :gender, :as => :radio, :collection => ['male', 'female'], :input_html => {:class => 'checkbox'}, :label_html => {:class => 'label'}
+    = f.input :date_of_birth, :as => :date, :start_year => Date.today.year - 90, :end_year => Date.today.year - 12, :order => [:day,:month,:year], :input_html => {:class => 'text_field'}, :label_html => {:class => 'label'}
+    = f.input :curriculum_vitae, :as => :file, :input_html => {:class => 'text_field'}, :label_html => {:class => 'label'}
+    = f.input :remote_curriculum_vitae_url, :as => :string  , :input_html => {:class => 'text_field'}, :label_html => {:class => 'label'}, :label => 'Or specify CV url'
+  .actions
+    %button{:class => 'button', :type => 'submit'} Submit
+

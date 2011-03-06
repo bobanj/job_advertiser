@@ -1,0 +1,36 @@
+%p#notice= notice
+
+%p
+  %b Avatar:
+  = image_tag(@user.avatar_url(:thumb)) if @user.avatar?
+%p
+  %b First name:
+  = @user.first_name
+%p
+  %b Last name:
+  = @user.last_name
+%p
+  %b Street name:
+  = @user.street_name
+%p
+  %b Postcode:
+  = @user.postcode
+%p
+  %b Country:
+  = @user.country
+%p
+  %b Mobile:
+  = @user.mobile
+%p
+  %b Gender:
+  = @user.gender
+%p
+  %b Date of birth:
+  = @user.date_of_birth
+%p
+  %b CV:
+  = link_to 'CV', @user.curriculum_vitae_url
+
+= link_to 'Edit', edit_user_path(@user)
+\|
+= link_to 'Back', users_path
